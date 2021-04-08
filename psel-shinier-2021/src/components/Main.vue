@@ -1,7 +1,7 @@
 <template>
   <div class="hero has-background-black is-fullheight">
     <!-- Top bar starts -->
-    <div class="hero-head is-flex is-align-items-center mx-4 mt-2">
+    <nav class="hero-head is-flex is-align-items-center mx-2 mt-2">
       <div class="tile is-parent is-2">
         <img src="../assets/Logo_analytics.png" alt="Logo da Analytics" />
       </div>
@@ -18,34 +18,36 @@
 
         <p class="has-text-white mr-6 mt-2">Super Admin</p>
       </div>
-    </div>
+    </nav>
     <!-- Top bar ends -->
 
-    <div class="tile mx-4 mb-2">
+    <!-- Middle bar starts -->
+    <section class="title is-flex mx-2">
+      <div class="tile is-parent is-2"></div>
+
+      <div class="tile is-parent is-10">
+        <article class="tile is-child has-background-dark has-text-white">
+          <p>dasdsadasdas</p>
+        </article>
+      </div>
+    </section>
+    <!-- Middle bar ends -->
+
+    <!-- Bottom bar starts-->
+    <main class="tile mx-2 mb-2">
       <div class="tile is-parent is-2">
-        <article class="tile is-child notification is-success">
-          <div class="content">
-            <p class="title">Tall tile</p>
-            <p class="subtitle">With even more content</p>
-            <div class="content">
-              <!-- Content -->
-            </div>
-          </div>
+        <article class="tile is-child has-background-dark has-text-white">
+          <p>adssdaasda</p>
         </article>
       </div>
 
       <div class="tile is-parent is-10">
-        <article class="tile is-child notification is-success">
-          <div class="content">
-            <p class="title">Tall tile</p>
-            <p class="subtitle">With even more content</p>
-            <div class="content">
-              <!-- Content -->
-            </div>
-          </div>
+        <article class="tile is-child has-background-dark has-text-white">
+          <p>dasdsadasdas</p>
         </article>
       </div>
-    </div>
+    </main>
+    <!-- Bottom bar ends-->
   </div>
 </template>
 
