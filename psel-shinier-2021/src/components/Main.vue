@@ -13,8 +13,9 @@
           <b-input
             placeholder="Buscar Funcionalidade"
             type="search"
-            icon="magnify"
-            class="searchBar has-background-dark"
+            icon-pack="fas"
+            icon="search"
+            class="searchBar"
           >
           </b-input>
         </b-field>
@@ -46,11 +47,27 @@
 
     <!-- Bottom bar starts-->
     <main class="tile mx-2 mb-2">
+      <!-- Sidebar starts-->
       <div class="tile is-parent is-2">
-        <article
-          class="tile is-child has-background-dark has-text-white"
-        ></article>
+        <article class="tile is-child has-background-dark has-text-white">
+          <div>
+            <img :src="dashboardIcon" />
+          </div>
+          <div>
+            <img :src="groupsIcon" />
+          </div>
+          <div>
+            <img :src="userIcon" />
+          </div>
+          <div>
+            <img :src="systemIcon" />
+          </div>
+          <div>
+            <img :src="categoryIcon" />
+          </div>
+        </article>
       </div>
+      <!-- Sidebar starts-->
 
       <div class="tile is-parent is-10">
         <article class="tile is-child has-background-dark has-text-white">
@@ -63,9 +80,24 @@
 </template>
 
 <script>
+import dashboardIcon from "../assets/Sidemenu/dashboardIcon.svg";
+import groupsIcon from "../assets/Sidemenu/groupsIcon.svg";
+import userIcon from "../assets/Sidemenu/userIcon.svg";
+import systemIcon from "../assets/Sidemenu/systemIcon.svg";
+import categoryIcon from "../assets/Sidemenu/categoryIcon.svg";
+
 export default {
   name: "Main",
   props: {},
+  data() {
+    return {
+      dashboardIcon,
+      groupsIcon,
+      userIcon,
+      systemIcon,
+      categoryIcon,
+    };
+  },
 };
 </script>
 
