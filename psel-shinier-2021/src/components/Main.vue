@@ -48,22 +48,27 @@
     <!-- Bottom bar starts-->
     <main class="tile mx-2 mb-2">
       <!-- Sidebar starts-->
-      <div class="tile is-parent is-2">
-        <article class="tile is-child has-background-dark has-text-white">
-          <div>
-            <img :src="dashboardIcon" />
+      <div class="tile is-parent is-2 mt-5">
+        <article class="tile is-child has-text-white">
+          <div class="sideBarElement mb-6">
+            <img :src="dashboardIcon" class="ml-6" />
+            <span>Dashboard</span>
           </div>
-          <div>
-            <img :src="groupsIcon" />
+          <div class="sideBarElement mb-6">
+            <img :src="groupsIcon" class="ml-6" />
+            <span>Grupos</span>
           </div>
-          <div>
-            <img :src="userIcon" />
+          <div class="sideBarElement mb-6">
+            <img :src="userIcon" class="ml-6" />
+            <span>Usuários</span>
           </div>
-          <div>
-            <img :src="systemIcon" />
+          <div class="sideBarElement mb-6">
+            <img :src="systemIcon" class="ml-6" />
+            <span>Sistemas</span>
           </div>
-          <div>
-            <img :src="categoryIcon" />
+          <div class="sideBarElement">
+            <img :src="categoryIcon" class="ml-6" />
+            <span>Categoria</span>
           </div>
         </article>
       </div>
@@ -114,5 +119,10 @@ export default {
 .box {
   width: 2.5rem;
   height: 2.5rem;
+}
+
+.sideBarElement {
+  display: grid;
+  grid-template: 1fr /1fr 1.5fr;
 }
 </style>
