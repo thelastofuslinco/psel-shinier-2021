@@ -74,11 +74,53 @@
       </div>
       <!-- Sidebar starts-->
 
+      <!-- Body starts-->
       <div class="tile is-parent is-10">
-        <article class="tile is-child has-background-dark has-text-white">
-          <p>dasdsadasdas</p>
+        <article
+          class="tile is-child has-background-dark has-text-white notification"
+        >
+          <div
+            class="is-flex is-align-items-center is-justify-content-space-between container is-fullhd has-text-black"
+          >
+            <div>
+              <img :src="filterIcon" alt="" />
+              <span class="ml-1">Filtros | Ordenar por</span>
+            </div>
+
+            <div class="field has-addons filter">
+              <p class="control">
+                <button class="button has-background-black-bis">
+                  <span class="icon is-small">
+                    <i class="fas fa-align-left"></i>
+                  </span>
+                  <span>Left</span>
+                </button>
+              </p>
+
+              <p class="control">
+                <button class="button has-background-black-bis">
+                  <span class="icon is-small">
+                    <i class="fas fa-align-center"></i>
+                  </span>
+                  <span>Center</span>
+                </button>
+              </p>
+
+              <p class="control">
+                <button class="button has-background-black-bis">
+                  <span class="icon is-small">
+                    <i class="fas fa-align-right"></i>
+                  </span>
+                  <span>Right</span>
+                </button>
+              </p>
+            </div>
+          </div>
+
+          <div class="separator">Grupos</div>
         </article>
       </div>
+      <!-- Body ends-->
     </main>
     <!-- Bottom bar ends-->
   </div>
@@ -90,6 +132,7 @@ import groupsIcon from "../assets/Sidemenu/groupsIcon.svg";
 import userIcon from "../assets/Sidemenu/userIcon.svg";
 import systemIcon from "../assets/Sidemenu/systemIcon.svg";
 import categoryIcon from "../assets/Sidemenu/categoryIcon.svg";
+import filterIcon from "../assets/Sidemenu/filterIcon.svg";
 
 export default {
   name: "Main",
@@ -101,6 +144,7 @@ export default {
       userIcon,
       systemIcon,
       categoryIcon,
+      filterIcon,
     };
   },
 };
@@ -124,5 +168,25 @@ export default {
 .sideBarElement {
   display: grid;
   grid-template: 1fr /1fr 1.5fr;
+}
+
+.filter button {
+  color: #90a1ac;
+  border: none;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+}
+
+.separator:after {
+  content: "";
+  flex: 1;
+  border-bottom: 2px dashed#000;
+}
+
+.separator:after {
+  margin-left: 0.25em;
 }
 </style>
