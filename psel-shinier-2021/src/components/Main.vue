@@ -124,9 +124,44 @@
           <!-- DottedLine ends-->
 
           <!-- Body Content starts-->
-          <section class="BodyContent">
-            <div class="has-background-black-bis">dfsdfds</div>
-            <div class="has-background-black-bis">dfsdfds</div>
+          <section class="bodyContent">
+            <div class="has-background-black-bis">
+              <div>
+                <span>Super Admin</span>
+                <div class="bodyContentBollCard">
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div></div>
+              <div class="is-flex is-justify-content-space-between">
+                <div>
+                  <p>Todos os usuarios com todas as permissões...</p>
+                  <p>2 hours ago</p>
+                </div>
+
+                <b-button class="is-dark is-rounded">Ver Mais</b-button>
+              </div>
+            </div>
+
+            <div class="has-background-black-bis">
+              <div>
+                <span>Técnicos</span>
+                <div class="bodyContentBollCard">
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div></div>
+              <div class="is-flex is-justify-content-space-between">
+                <div>
+                  <p>Todos os usuarios que são desenvolvedores da ...</p>
+                  <p>2 hours ago</p>
+                </div>
+
+                <b-button class="is-dark is-rounded">Ver Mais</b-button>
+              </div>
+            </div>
           </section>
           <!-- Body Content ends-->
 
@@ -216,18 +251,64 @@ export default {
   margin-left: 0.25em;
 }
 
-.BodyContent {
+.bodyContent {
   height: 50vh;
   overflow-x: scroll;
   display: flex;
   flex-wrap: wrap;
 }
 
-.BodyContent > div {
-  width: 34rem;
-  height: 8.75rem;
+.bodyContent > div {
+  width: 37.2vw;
+  height: 10.75rem;
   margin-left: 1.25rem;
   margin-top: 0.96875rem;
+
+  border-radius: 0.6rem;
+}
+
+.bodyContent > div > div:first-child {
+  margin: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bodyContent > div > div:first-child {
+  color: #4472c4;
+}
+
+.bodyContentBollCard {
+  display: flex;
+}
+
+.bodyContentBollCard > div:first-child {
+  background: #bd1b24;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-right: 0.6rem;
+}
+
+.bodyContentBollCard > div:last-child {
+  background: #ffc700;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+}
+
+.bodyContent > div > div:nth-child(2) {
+  content: "";
+  flex: 1;
+  border-bottom: 2px dashed#000;
+  margin: 0 1.2rem;
+}
+
+.bodyContent > div > div:nth-child(3) {
+  margin: 1.2rem;
+}
+
+.bodyContent > div > div:nth-child(3) p:last-child {
+  opacity: 50%;
 }
 
 .bodyFooter {
