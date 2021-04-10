@@ -124,7 +124,10 @@
           <!-- DottedLine ends-->
 
           <!-- Body Content starts-->
-          <section class="BodyContent"></section>
+          <section class="BodyContent">
+            <div class="has-background-black-bis">dfsdfds</div>
+            <div class="has-background-black-bis">dfsdfds</div>
+          </section>
           <!-- Body Content ends-->
 
           <!-- Footer starts -->
@@ -218,6 +221,13 @@ export default {
   overflow-x: scroll;
   display: flex;
   flex-wrap: wrap;
+}
+
+.BodyContent > div {
+  width: 34rem;
+  height: 8.75rem;
+  margin-left: 1.25rem;
+  margin-top: 0.96875rem;
 }
 
 .bodyFooter {
