@@ -77,10 +77,11 @@
       <!-- Body starts-->
       <div class="tile is-parent is-10">
         <article
-          class="tile is-child has-background-dark has-text-white notification"
+          class="tile is-child has-background-black-ter has-text-white notification"
         >
+          <!-- Filter starts-->
           <div
-            class="is-flex is-align-items-center is-justify-content-space-between container is-fullhd has-text-black"
+            class="is-flex is-align-items-center is-justify-content-space-between container is-fullhd has-text-black mb-5"
           >
             <div>
               <img :src="filterIcon" alt="" />
@@ -116,8 +117,30 @@
               </p>
             </div>
           </div>
+          <!-- Filter ends-->
 
-          <div class="separator">Grupos</div>
+          <!-- DottedLine starts-->
+          <div class="dottedLine">Grupos</div>
+          <!-- DottedLine ends-->
+
+          <!-- Body Content starts-->
+          <section class="BodyContent"></section>
+          <!-- Body Content ends-->
+
+          <!-- Footer starts -->
+          <footer class="bodyFooter is-flex mt-5">
+            <div class="footerBox"><span>&lt;&lt;</span></div>
+            <div class="footerBox"><span>&lt;</span></div>
+            <div class="footerBox"><span>1</span></div>
+            <div class="footerBox"><span>2</span></div>
+            <div class="footerBox"><span>3</span></div>
+            <div class="footerBox"><span>4</span></div>
+            <span class="mr-3"><span>...</span></span>
+            <div class="footerBox"><span>20</span></div>
+            <div class="footerBox"><span>&gt;</span></div>
+            <div class="footerBox"><span>&gt;&gt;</span></div>
+          </footer>
+          <!-- Footer ends -->
         </article>
       </div>
       <!-- Body ends-->
@@ -175,18 +198,46 @@ export default {
   border: none;
 }
 
-.separator {
+.dottedLine {
   display: flex;
   align-items: center;
 }
 
-.separator:after {
+.dottedLine:after {
   content: "";
   flex: 1;
   border-bottom: 2px dashed#000;
 }
 
-.separator:after {
+.dottedLine:after {
   margin-left: 0.25em;
+}
+
+.BodyContent {
+  height: 50vh;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bodyFooter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.footerBox {
+  background-color: #68a35d;
+  height: 1.87rem;
+  width: 1.87rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.3125rem;
+  margin-right: 0.75rem;
+
+  text-align: center;
+}
+
+.footerBox > span {
+  font-size: 0.67rem;
 }
 </style>
