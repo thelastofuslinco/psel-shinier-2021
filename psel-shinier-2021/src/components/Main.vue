@@ -32,7 +32,7 @@
     <!-- Top bar ends -->
 
     <!-- Middle bar starts -->
-    <section class="title is-flex mx-2">
+    <section class="title is-flex mx-2 mb-0">
       <div class="tile is-parent is-2"></div>
 
       <div class="tile is-parent is-10">
@@ -72,55 +72,8 @@
           </div>
         </article>
       </div>
-      <!-- Sidebar starts-->
-
-      <!-- Body starts-->
-      <div class="tile is-parent is-10">
-        <article
-          class="tile is-child has-background-dark has-text-white notification"
-        >
-          <div
-            class="is-flex is-align-items-center is-justify-content-space-between container is-fullhd has-text-black"
-          >
-            <div>
-              <img :src="filterIcon" alt="" />
-              <span class="ml-1">Filtros | Ordenar por</span>
-            </div>
-
-            <div class="field has-addons filter">
-              <p class="control">
-                <button class="button has-background-black-bis">
-                  <span class="icon is-small">
-                    <i class="fas fa-align-left"></i>
-                  </span>
-                  <span>Left</span>
-                </button>
-              </p>
-
-              <p class="control">
-                <button class="button has-background-black-bis">
-                  <span class="icon is-small">
-                    <i class="fas fa-align-center"></i>
-                  </span>
-                  <span>Center</span>
-                </button>
-              </p>
-
-              <p class="control">
-                <button class="button has-background-black-bis">
-                  <span class="icon is-small">
-                    <i class="fas fa-align-right"></i>
-                  </span>
-                  <span>Right</span>
-                </button>
-              </p>
-            </div>
-          </div>
-
-          <div class="separator">Grupos</div>
-        </article>
-      </div>
-      <!-- Body ends-->
+      <!-- Sidebar ends-->
+      <GroupList />
     </main>
     <!-- Bottom bar ends-->
   </div>
@@ -132,7 +85,7 @@ import groupsIcon from "../assets/Sidemenu/groupsIcon.svg";
 import userIcon from "../assets/Sidemenu/userIcon.svg";
 import systemIcon from "../assets/Sidemenu/systemIcon.svg";
 import categoryIcon from "../assets/Sidemenu/categoryIcon.svg";
-import filterIcon from "../assets/Sidemenu/filterIcon.svg";
+import GroupList from "./GroupList.vue";
 
 export default {
   name: "Main",
@@ -144,8 +97,10 @@ export default {
       userIcon,
       systemIcon,
       categoryIcon,
-      filterIcon,
     };
+  },
+  components: {
+    GroupList,
   },
 };
 </script>
@@ -175,18 +130,99 @@ export default {
   border: none;
 }
 
-.separator {
+.dottedLine {
   display: flex;
   align-items: center;
 }
 
-.separator:after {
+.dottedLine:after {
   content: "";
   flex: 1;
   border-bottom: 2px dashed#000;
 }
 
-.separator:after {
+.dottedLine:after {
   margin-left: 0.25em;
+}
+
+.bodyContent {
+  height: 50vh;
+  overflow-x: scroll;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bodyContent > div {
+  width: 37.2vw;
+  height: 10.75rem;
+  margin-left: 1.25rem;
+  margin-top: 0.96875rem;
+
+  border-radius: 0.6rem;
+}
+
+.bodyContent > div > div:first-child {
+  margin: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bodyContent > div > div:first-child {
+  color: #4472c4;
+}
+
+.bodyContentBollCard {
+  display: flex;
+}
+
+.bodyContentBollCard > div:first-child {
+  background: #bd1b24;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+  margin-right: 0.6rem;
+}
+
+.bodyContentBollCard > div:last-child {
+  background: #ffc700;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 2rem;
+}
+
+.bodyContent > div > div:nth-child(2) {
+  content: "";
+  flex: 1;
+  border-bottom: 2px dashed#000;
+  margin: 0 1.2rem;
+}
+
+.bodyContent > div > div:nth-child(3) {
+  margin: 1.2rem;
+}
+
+.bodyContent > div > div:nth-child(3) p:last-child {
+  opacity: 50%;
+}
+
+.bodyFooter {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.footerBox {
+  background-color: #68a35d;
+  height: 1.87rem;
+  width: 1.87rem;
+  border-radius: 0.3rem;
+  margin-bottom: 0.3125rem;
+  margin-right: 0.75rem;
+
+  text-align: center;
+}
+
+.footerBox > span {
+  font-size: 0.67rem;
 }
 </style>
