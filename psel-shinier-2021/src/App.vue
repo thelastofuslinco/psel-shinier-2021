@@ -1,16 +1,23 @@
 <template>
   <div id="app" class="hero has-background-black is-fullheight">
     <TopBar />
-    <button v-on:click="created">Toggle</button>
-    <MiddleBar msg="Grupos com acesso a plataforma" msgButton="Novo Grupo" />
-    <BottomBar />
+    <div>
+      <component v-bind:is="component" />
+      <button v-on:click="toggle">Toggle</button>
+    </div>
+    <MiddleBar
+      msg="Grupos com acesso a plataforma"
+      msgButton="Novo Grupo"
+      v-on:click="toggle"
+    />
+    <BottomBarList />
   </div>
 </template>
 
 <script>
 import TopBar from "./components/TopBar.vue";
 import MiddleBar from "./components/MiddleBar.vue";
-import BottomBar from "./components/BottomBar.vue";
+import BottomBarList from "./components/BottomBarList.vue";
 
 export default {
   name: "App",
@@ -18,11 +25,22 @@ export default {
   components: {
     TopBar,
     MiddleBar,
-    BottomBar,
+    BottomBarList,
+  },
+  data() {
+    return {
+      component: "MiddleBar",
+    };
   },
   methods: {
-    created() {
-      BottomBar.methods.toggle();
+    toggle() {
+      if (this.component === TopBar) {
+        console.log(this.component);
+        this.component = MiddleBar;
+      } else {
+        console.log(this.component);
+        this.component = TopBar;
+      }
     },
   },
 };

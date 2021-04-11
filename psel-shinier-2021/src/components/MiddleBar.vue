@@ -8,7 +8,9 @@
         <p>{{ msg }}</p>
       </article>
 
-      <b-button type="is-success" class="is-size-6">{{ msgButton }}</b-button>
+      <b-button type="is-success" class="is-size-6" v-on:click="toggle()">{{
+        msgButton
+      }}</b-button>
     </div>
   </section>
   <!-- Middle bar ends -->
@@ -20,6 +22,7 @@ export default {
   props: {
     msg: String,
     msgButton: String,
+    toggle: Function,
   },
 };
 </script>
