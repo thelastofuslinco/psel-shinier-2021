@@ -139,7 +139,7 @@ import categoryIcon from "../assets/Sidemenu/categoryIcon.svg";
 import filterIcon from "../assets/Sidemenu/filterIcon.svg";
 
 export default {
-  name: "BottomBarList",
+  name: "BottomBar",
   props: {},
   data() {
     return {

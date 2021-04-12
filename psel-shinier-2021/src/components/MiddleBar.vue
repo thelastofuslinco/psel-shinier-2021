@@ -8,7 +8,7 @@
         <p>{{ msg }}</p>
       </article>
 
-      <b-button type="is-success" class="is-size-6" v-on:click="toggle()">{{
+      <b-button type="is-success" class="is-size-6" v-on:click="paodoce">{{
         msgButton
       }}</b-button>
     </div>
@@ -17,12 +17,19 @@
 </template>
 
 <script>
+import App from "../App.vue"
+
 export default {
   name: "MiddleBar",
   props: {
     msg: String,
     msgButton: String,
-    toggle: Function,
+    joao: Function,
+  },
+  methods: {
+    paodoce() {
+      App.methods.toggle()
+    },
   },
 };
 </script>
