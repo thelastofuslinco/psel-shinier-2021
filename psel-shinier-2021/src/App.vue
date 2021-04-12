@@ -1,7 +1,5 @@
 <template>
   <div id="app">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/CreateGroup">group</router-link>
     <router-view/>
   </div>
 </template>
@@ -21,8 +19,15 @@ export default {
   color: #9ea7ac !important;
 }
 
+select{
+  background: #171819 !important;
+  border: none !important;
+  color: #9ea7ac !important;
+}
+
 input {
   background: #171819 !important;
   border: none !important;
+  color: #9ea7ac !important;
 }
 </style>

@@ -7,29 +7,23 @@
       <article class="tile is-child has-text-white">
         <p>{{ msg }}</p>
       </article>
-
-      <b-button type="is-success" class="is-size-6" v-on:click="paodoce">{{
-        msgButton
-      }}</b-button>
+      
+      <router-link :to="link">
+        <b-button type="is-success" class="is-size-6">{{ msgButton }}</b-button>
+      </router-link>
     </div>
   </section>
   <!-- Middle bar ends -->
 </template>
 
 <script>
-import App from "../App.vue"
 
 export default {
   name: "MiddleBar",
   props: {
     msg: String,
     msgButton: String,
-    joao: Function,
-  },
-  methods: {
-    paodoce() {
-      App.methods.toggle()
-    },
+    link: String,
   },
 };
 </script>

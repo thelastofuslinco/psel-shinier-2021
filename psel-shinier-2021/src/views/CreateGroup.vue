@@ -1,16 +1,19 @@
 <template>
   <div class="hero has-background-black is-fullheight">
     <TopBar />
-    <MiddleBar msg="Grupos com acesso a plataforma" msgButton="Novo Grupo" />
-    <div>cedadsadsa</div>
-    <BottomBar />
+    <MiddleBar
+      msg="Grupos com acesso a plataforma"
+      msgButton="Salvar"
+      link="/"
+    />
+    <BottomCreate />
   </div>
 </template>
 
 <script>
 import TopBar from "../components/TopBar.vue";
 import MiddleBar from "../components/MiddleBar.vue";
-import BottomBar from "../components/BottomBar.vue";
+import BottomCreate from "../components/BottomCreate.vue";
 
 export default {
   name: "CreateGroup",
@@ -18,7 +21,7 @@ export default {
   components: {
     TopBar,
     MiddleBar,
-    BottomBar,
+    BottomCreate,
   },
 };
 </script>

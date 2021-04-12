@@ -36,9 +36,11 @@
         <div
           class="is-flex is-align-items-center is-justify-content-space-between container is-fullhd has-text-black mb-5"
         >
-          <div>
+          <div class="filterText">
             <img :src="filterIcon" alt="" />
-            <span class="ml-1">Filtros | Ordenar por</span>
+            <span class="ml-1 mr-4 has-text-white">Filtros</span>
+            <span class="has-text-white">|</span>
+            <span class="ml-1 ml-4 has-text-white">Ordenar por</span>
           </div>
 
           <div class="field has-addons filter">

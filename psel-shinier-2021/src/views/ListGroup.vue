@@ -1,7 +1,7 @@
 <template>
   <div class="hero has-background-black is-fullheight">
     <TopBar />
-    <MiddleBar msg="Grupos com acesso a plataforma" msgButton="Novo Grupo" />
+    <MiddleBar link="/CreateGroup" msg="Grupos com acesso a plataforma" msgButton="Novo Grupo" />
     <BottomBar />
   </div>
 </template>
