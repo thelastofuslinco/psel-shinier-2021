@@ -7,22 +7,23 @@
       <article class="tile is-child has-text-white">
         <p>{{ msg }}</p>
       </article>
-
-      <b-button type="is-success" class="is-size-6" v-on:click="toggle()">{{
-        msgButton
-      }}</b-button>
+      
+      <router-link :to="link">
+        <b-button type="is-success" class="is-size-6">{{ msgButton }}</b-button>
+      </router-link>
     </div>
   </section>
   <!-- Middle bar ends -->
 </template>
 
 <script>
+
 export default {
   name: "MiddleBar",
   props: {
     msg: String,
     msgButton: String,
-    toggle: Function,
+    link: String,
   },
 };
 </script>
